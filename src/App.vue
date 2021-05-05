@@ -158,15 +158,15 @@ h1 {
   border-radius: 2em;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
   color: #ffffff;
   background-color: #333333;
   text-align: center;
   transition: all 0.2s;
   border: none;
   width: 10rem;
-  height: 3rem;
+  height: 4rem;
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
 }
 
 .startBtn:hover {
