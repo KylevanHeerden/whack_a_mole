@@ -4,8 +4,14 @@
     rel="stylesheet"
     type="text/css"
   />
-  <h1>Whack-a-mole! <span class="score" ref="scoreBoard">0</span></h1>
-  <button @click="startGame()">Start!</button>
+  <div class="headingDiv">
+    <h1>
+      Whack-a-mole!
+      <span class="score" ref="scoreBoard">{{ score }}</span
+      ><span v-if="end">/ {{ numberOfMoles }}</span>
+    </h1>
+    <button @click="startGame()" class="startBtn">Lets play!</button>
+  </div>
 
   <div class="game">
     <div
@@ -37,9 +43,20 @@ export default defineComponent({
 
     let lastHole: any;
     let timeUp = false;
-    let score = 0;
+    let score = ref(0);
+    let numberOfMoles = ref(0);
+    let end = ref(false);
 
-    return { holes, scoreBoard, moles, lastHole, timeUp, score };
+    return {
+      holes,
+      scoreBoard,
+      moles,
+      lastHole,
+      timeUp,
+      score,
+      numberOfMoles,
+      end,
+    };
   },
 
   data() {
@@ -65,22 +82,26 @@ export default defineComponent({
     },
     // Function that makes the moles pop up
     peep() {
-      const time = this.randomTime(1000, 1000);
+      const time = this.randomTime(200, 1000);
       const hole = this.randomHole(this.holes);
       hole.classList.add("up");
       setTimeout(() => {
         hole.classList.remove("up");
         if (!this.timeUp) this.peep();
       }, time);
+      this.numberOfMoles++;
     },
     // Function to start the game and reset score
     startGame() {
       this.scoreBoard.textContent = "0";
       this.timeUp = false;
       this.score = 0;
+      this.numberOfMoles = 0;
+      this.end = false;
       this.peep();
       setTimeout(() => {
         this.timeUp = true;
+        this.end = true;
       }, 10000);
     },
     // Function that bonks the mole on the head and adds point to score
@@ -88,7 +109,6 @@ export default defineComponent({
       if (!event.isTrusted) return; // This check if the user really clicked the mole or was it fake. aka cheater
       this.score++;
       event.srcElement.classList.remove("up");
-      this.scoreBoard.textContent = this.score.toString();
     },
   },
 });
@@ -113,6 +133,10 @@ body {
   font-family: "Amatic SC", cursive;
 }
 
+.headingDiv {
+  text-align: center;
+}
+
 h1 {
   text-align: center;
   font-size: 10rem;
@@ -125,6 +149,28 @@ h1 {
   padding: 0 3rem;
   line-height: 1;
   border-radius: 1rem;
+}
+
+.startBtn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #333333;
+  text-align: center;
+  transition: all 0.2s;
+  border: none;
+  width: 10rem;
+  height: 3rem;
+}
+
+.startBtn:hover {
+  background-color: #333333;
 }
 
 .game {
