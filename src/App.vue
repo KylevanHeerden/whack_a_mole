@@ -118,7 +118,8 @@ export default defineComponent({
 html {
   box-sizing: border-box;
   font-size: 10px;
-  background: #ffc600;
+  background: rgba(33, 79, 75, 1);
+  background-image: url("./assets/grass1.jpg");
 }
 
 *,

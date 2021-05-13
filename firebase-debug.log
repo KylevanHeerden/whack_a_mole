@@ -1,0 +1,49 @@
+[debug] [2021-05-13T09:43:22.215Z] ----------------------------------------------------------------------
+[debug] [2021-05-13T09:43:22.217Z] Command:       /Users/kylevanheerden/.nvm/versions/node/v14.16.0/bin/node /Users/kylevanheerden/.nvm/versions/node/v14.16.0/bin/firebase deploy
+[debug] [2021-05-13T09:43:22.217Z] CLI Version:   9.10.0
+[debug] [2021-05-13T09:43:22.217Z] Platform:      darwin
+[debug] [2021-05-13T09:43:22.217Z] Node Version:  v14.16.0
+[debug] [2021-05-13T09:43:22.220Z] Time:          Thu May 13 2021 11:43:22 GMT+0200 (South Africa Standard Time)
+[debug] [2021-05-13T09:43:22.220Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-13T09:43:22.224Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-05-13T09:43:22.242Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-13T09:43:22.242Z] > authorizing via signed-in user (kylevanheerden123@gmail.com)
+[debug] [2021-05-13T09:43:22.242Z] [iam] checking project whack-a-mole0 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-05-13T09:43:22.243Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-05-13T09:43:22.243Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-13T09:43:22.738Z] <<< HTTP RESPONSE 200 {"date":"Thu, 13 May 2021 09:43:22 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-13T09:43:22.792Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/whack-a-mole0:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-05-13T09:43:23.370Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-05-13T09:43:23.370Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2021-05-13T09:43:24.781Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 13 May 2021 09:43:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1481","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-13T09:43:24.785Z] > refreshing access token with scopes: []
+[debug] [2021-05-13T09:43:24.785Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-13T09:43:25.242Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 13 May 2021 09:43:25 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-13T09:43:25.291Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/whack-a-mole0 [none]
+[debug] [2021-05-13T09:43:26.119Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/whack-a-mole0 200
+[debug] [2021-05-13T09:43:26.119Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/whack-a-mole0 {"projectId":"whack-a-mole0","projectNumber":"881413197049","displayName":"whack-a-mole","name":"projects/whack-a-mole0","resources":{"hostingSite":"whack-a-mole0"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'whack-a-mole0'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-05-13T09:43:26.126Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-05-13T09:43:26.126Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-13T09:43:26.582Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 13 May 2021 09:43:26 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-13T09:43:26.624Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/whack-a-mole0/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-05-13T09:43:29.289Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 13 May 2021 09:43:29 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[whack-a-mole0]: beginning deploy... 
+[info] i  hosting[whack-a-mole0]: found 10 files in dist 
+[debug] [2021-05-13T09:43:29.435Z] > refreshing access token with scopes: []
+[debug] [2021-05-13T09:43:29.435Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-13T09:43:29.438Z] [hosting] hash cache [ZGlzdA] stored for 10 files
+[debug] [2021-05-13T09:43:29.438Z] [hosting][hash queue][FINAL] {"max":121,"min":5,"avg":25.5,"active":0,"complete":10,"success":10,"errored":0,"retried":0,"total":10,"elapsed":127}
+[debug] [2021-05-13T09:43:29.895Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 13 May 2021 09:43:30 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-13T09:43:29.945Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/whack-a-mole0/versions/909176f8718c1291:populateFiles [none]
+[debug] [2021-05-13T09:43:29.946Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/whack-a-mole0/versions/909176f8718c1291:populateFiles {"files":{"/index.html":"4f5e5d97a05e424e6b305cdd0ed056c8fbac394710da8ac9819874b28504f7a6","/css/app.71da2813.css":"aedb819ed90029462e4f94c6820787918252eaa60fba01f8e5ff1accbd89e017","/favicon.ico":"1e71457865f706dc865b49a54a86e193818220d290b30226b6630a42faf1535d","/js/app.ba0baf05.js":"b11c2a8ed840db7995f3e94c93c937a3d8957cc3b7bd7e1d350fbb6be9c37e72","/img/mole.33f3e860.svg":"801911c2d89fc8bbb386cd69939a70b8830e83a138da5610899470856a6a38bc","/js/app.ba0baf05.js.map":"38143287e2c573e38b46d695f487f920f83144fa2fa5bc6c4ac3dda6f4797417","/img/dirt.938a0913.svg":"1045d36c2630ddc696f39ebb2adc016919f7788137dc3f121f5977443521048b","/js/chunk-vendors.0636523c.js":"0162c6836f4d967310da937e5df45e69ffcb586e680b833cfc6d25ce131b8086","/js/chunk-vendors.0636523c.js.map":"5890b5e6f84e8701cadf2307947bf73d30f29de88ce82f3a747483ac6bb81e09","/img/grass1.69a9da24.jpg":"6da06fc663fc9dbfb0cb35fc2ae936d5360638539a00a503fc5b3d222956bcb3"}}
