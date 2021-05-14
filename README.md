@@ -4,7 +4,7 @@ A simple game where a user whacks a mole as they appear. This application uses V
 
 Demo link: https://whack-a-mole0.web.app/
 
-![alt text](https://github.com/KylevanHeerden/whack_a_mole/blob/main/Screenshot%202021-05-05%20at%2016.28.00.png)
+![alt text](https://github.com/KylevanHeerden/whack_a_mole/blob/main/pro4.png)
 
 
 ## Project setup
